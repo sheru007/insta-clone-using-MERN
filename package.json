@@ -4,7 +4,8 @@
   "description": "First MERN Application",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "dev": "node app.js",
+    "start": "npm run heroku-postbuild && node app.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "sheru khan",

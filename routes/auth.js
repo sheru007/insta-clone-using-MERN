@@ -57,7 +57,7 @@ router.post('/signup', function (req, res) {
                                     user.save().then((result) => {
                                         transporter.sendMail({
                                             to: user.email,
-                                            from: "apnainstaa@gmail.com",
+                                            from: "sherukhansde@gmail.com",
                                             subject: "apnainsta email verification",
                                             html: `
                                     <h1>Please verify email</h1>
@@ -116,7 +116,7 @@ router.post('/signin', function (req, res) {
                     savedUser.save().then((result) => {
                         transporter.sendMail({
                             to: savedUser.email,
-                            from: "apnainstaa@gmail.com",
+                            from: "sherukhansde@gmail.com",
                             subject: "apnainsta email verification",
                             html: `
                             <p>Please verify email</p>
@@ -142,7 +142,7 @@ router.post('/signin', function (req, res) {
                             res.json({ token, user: { _id, name, email, followers, following, pic, bookmark} })
                             transporter.sendMail({
                                 to: email,
-                                from: "apnainstaa@gmail.com",
+                                from: "sherukhansde@gmail.com",
                                 subject: "apnainsta signin success",
                                 html: `
                         <p>Welcome to apnainsta </p>
@@ -185,7 +185,7 @@ router.post('/reset-password', (req, res) => {
                 user.save().then((result) => {
                     transporter.sendMail({
                         to: user.email,
-                        from: "apnainstaa@gmail.com",
+                        from: "sherukhansde@gmail.com",
                         subject: "apnainsta password reset",
                         html: `
                     <p>You requested for password reset</p>
